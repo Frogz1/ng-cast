@@ -6,9 +6,5 @@ angular.module('video-player')
       videos: '<'
     },
     templateUrl: 'src/templates/videoPlayer.html',
-    // controller: function(youTube) {
-    //   this.videos = window.exampleVideoData;
-    //   console.log(this.videos);
-    // }
-  
+    
   });

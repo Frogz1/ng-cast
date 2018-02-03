@@ -2,7 +2,8 @@ angular.module('video-player')
   .component('search', {
   // TODO
     bindings: {
-      search: '<'
+      result: '<',
+      dataService: '<'
     },
     templateUrl: 'src/templates/search.html'
   

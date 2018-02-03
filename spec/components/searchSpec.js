@@ -13,6 +13,7 @@ describe('search', function() {
     youTubeSearchMock = sinon.spy(function(string, callback) {
       callback(fakeVideoData);
     });
+    console.log('ahhhhhhhhhhh', youTube.search);
 
     youTube.search = youTubeSearchMock;
 
@@ -37,6 +38,7 @@ describe('search', function() {
 
   it('should invoke search when button is clicked', function() {
     element.find('button').click();
+    //console.log(youTubeSearchMock.callCount);
     expect(youTubeSearchMock.callCount).to.equal(1);
   });
 

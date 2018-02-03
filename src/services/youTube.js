@@ -1,13 +1,15 @@
 angular.module('video-player')
   .service('youTube', function($http) {
     this.search = function(options, callback) {
+      console.log(options);
 
-      console.log('button in: search')
       return $http({
         method: 'GET',
-        url: 'src/data/exampleVideoData.js'
-      });
-      
+        url: 'https://www.googleapis.com/youtube/v3/search',
+        params: options,
+      }).then( (data) => {
+        callback(data); 
+      });      
     };
   // TODO
   });
